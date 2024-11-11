@@ -1,39 +1,52 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Link from 'next/link'
-
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Unnati - Carbon Footprint Calculator',
   description: 'Calculate and track your carbon footprint with Unnati',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-[#FFFBF5]`}>
-        <header className="sticky top-0 z-50 w-full border-b bg-[#FFFBF5]/80 backdrop-blur-sm">
-          <div className="container flex h-16 items-center justify-between px-4">
-            <Link href="/" className="font-serif text-2xl text-[#5C4033]">
+      <body className={`font-droid min-h-screen bg-[#FFFBF5]`}>
+        <header className="sticky top-0 z-50 w-full bg-[#FFFBF5]">
+          <div className="container flex h-20 items-center justify-between px-4">
+            <Link
+              href="/"
+              className="font-swear text-3xl text-[#4D3503] font-thin"
+            >
               Unnati
             </Link>
-            <nav className="flex gap-6 font-medium text-[#5C4033]">
-              <Link href="/" className="transition-colors hover:text-[#5C4033]/80">
+            <nav className="flex gap-12 text-lg font-droid text-[#4D3503]">
+              <Link
+                href="/"
+                className="transition-colors hover:text-[#4D3503]/80"
+              >
                 Home
               </Link>
-              <Link href="/about" className="transition-colors hover:text-[#5C4033]/80">
+              <Link
+                href="/about"
+                className="transition-colors hover:text-[#4D3503]/80"
+              >
                 About Us
               </Link>
-              <Link href="/calculator" className="transition-colors hover:text-[#5C4033]/80">
+              <Link
+                href="/calculator"
+                className="transition-colors hover:text-[#4D3503]/80"
+              >
                 Calculator
               </Link>
-              <Link href="/blog" className="transition-colors hover:text-[#5C4033]/80">
+              <Link
+                href="/blog"
+                className="transition-colors hover:text-[#4D3503]/80"
+              >
                 Blog
               </Link>
             </nav>
@@ -49,5 +62,5 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
-  )
+  );
 }

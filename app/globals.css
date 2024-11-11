@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+/* * {
+  font-family: 'DroidSans', sans-serif;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -25,7 +29,7 @@
     --ring: 20 14.3% 4.1%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
@@ -48,7 +52,7 @@
     --ring: 24 5.7% 82.9%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -56,4 +60,48 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+@font-face {
+  font-family: 'DroidSans';
+  src: url('/unnati/fonts/DroidSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DroidSans';
+  src: url('/unnati/fonts/DroidSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('/unnati/fonts/SwearDisplay.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('/unnati/fonts/fonnts.com-Swear-Display-Black.otf')
+    format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('/unnati/fonts/fonnts.com-Swear-Display-Light.otf')
+    format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SwearDisplay';
+  src: url('/unnati/fonts/fonnts.com-Swear-Display-Medium.otf')
+    format('opentype');
+  font-weight: 600;
+  font-style: normal;
 }
